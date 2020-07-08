@@ -8,8 +8,12 @@
 function factorial(n) {
     let result = 1;
     // TODO このコメントを消して正しく実装してください。
+    if(n > 0){
+        result = n * factorial(n - 1);
+    }
     return result;
 }
+// console.log(factorial(100));
 const assert = require('assert');
 assert.equal(factorial(1), 1, `1の階乗は1ですが、実際は${factorial(1) }でした`);
 assert.equal(factorial(2), 2, `2の階乗は2ですが、実際は${factorial(2) }でした`);
